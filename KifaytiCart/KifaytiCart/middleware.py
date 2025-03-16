@@ -14,6 +14,7 @@ class BlockIPMiddleware:
     def __call__(self, request):
         # Get the client's IP address.
         ip = self.get_client_ip(request)
+        print("client Ip ", ip)
         if ip in self.blocked_ips:
             return HttpResponseForbidden("Access Denied: Your IP has been blocked.")
         # Continue processing the request if the IP is not blocked.
