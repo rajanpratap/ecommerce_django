@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }} - KifaytiCart</title>
+    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ product.name }}</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="product-detail">
+            <p>{{ product.description }}</p>
+            <p>Price: ${{ product.price }}</p>
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% endif %}
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; {{ current_year|default:2025 }} KifaytiCart. All rights reserved.</p>
+    </footer>
+</body>
+</html>
