@@ -44,12 +44,11 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'KifaytiCart.middleware.BlockIPMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'KifaytiCart.middleware.BlockIPMiddleware'
-    
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',    
 ]
 
 BLOCKED_IPS = [
