@@ -48,6 +48,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'KifaytiCart.middleware.BlockIPMiddleware'
+    
+]
+
+BLOCKED_IPS = [
+    '192.168.29.214',
+    # add more IPs as needed
 ]
 
 ROOT_URLCONF = 'KifaytiCart.urls'
